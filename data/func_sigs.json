@@ -1,0 +1,1493 @@
+{
+  "0x01ffc9a7": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes4", "name": "interfaceID", "type": "bytes4" }
+      ],
+      "name": "supportsInterface",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "supportsInterface",
+    "sig": "supportsInterface(bytes4)"
+  },
+  "0x0223536e": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes", "name": "_packetHeader", "type": "bytes" },
+        {
+          "internalType": "bytes32",
+          "name": "_payloadHash",
+          "type": "bytes32"
+        },
+        { "internalType": "uint64", "name": "_confirmations", "type": "uint64" }
+      ],
+      "name": "verify",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "verify",
+    "sig": "verify(bytes,bytes32,uint64)"
+  },
+  "0x06fdde03": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [{ "name": "", "type": "string" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "name",
+    "sig": "name()"
+  },
+  "0x0753c30c": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "_upgradedAddress", "type": "address" }],
+      "name": "deprecate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "deprecate",
+    "sig": "deprecate(address)"
+  },
+  "0x0894edf1": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes", "name": "_packetHeader", "type": "bytes" },
+        { "internalType": "bytes32", "name": "_payloadHash", "type": "bytes32" }
+      ],
+      "name": "commitVerification",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "commitVerification",
+    "sig": "commitVerification(bytes,bytes32)"
+  },
+  "0x095ea7b3": {
+    "abi": {
+      "constant": false,
+      "inputs": [
+        { "name": "_spender", "type": "address" },
+        { "name": "_value", "type": "uint256" }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "approve",
+    "sig": "approve(address,uint256)"
+  },
+  "0x0e136b19": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "deprecated",
+      "outputs": [{ "name": "", "type": "bool" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "deprecated",
+    "sig": "deprecated()"
+  },
+  "0x0ecb93c0": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "_evilUser", "type": "address" }],
+      "name": "addBlackList",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "addBlackList",
+    "sig": "addBlackList(address)"
+  },
+  "0x13137d65": {
+    "abi": {
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "uint32", "name": "srcEid", "type": "uint32" },
+            { "internalType": "bytes32", "name": "sender", "type": "bytes32" },
+            { "internalType": "uint64", "name": "nonce", "type": "uint64" }
+          ],
+          "internalType": "struct Origin",
+          "name": "_origin",
+          "type": "tuple"
+        },
+        { "internalType": "bytes32", "name": "_guid", "type": "bytes32" },
+        { "internalType": "bytes", "name": "_message", "type": "bytes" },
+        { "internalType": "address", "name": "_executor", "type": "address" },
+        { "internalType": "bytes", "name": "_extraData", "type": "bytes" }
+      ],
+      "name": "lzReceive",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "lzReceive",
+    "sig": "lzReceive((uint32,bytes32,uint64),bytes32,bytes,address,bytes)"
+  },
+  "0x1688f0b9": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_singleton", "type": "address" },
+        { "internalType": "bytes", "name": "initializer", "type": "bytes" },
+        { "internalType": "uint256", "name": "saltNonce", "type": "uint256" }
+      ],
+      "name": "createProxyWithNonce",
+      "outputs": [
+        {
+          "internalType": "contract GnosisSafeProxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "createProxyWithNonce",
+    "sig": "createProxyWithNonce(address,bytes,uint256)"
+  },
+  "0x17442b70": {
+    "abi": {
+      "inputs": [],
+      "name": "oAppVersion",
+      "outputs": [
+        { "internalType": "uint64", "name": "senderVersion", "type": "uint64" },
+        {
+          "internalType": "uint64",
+          "name": "receiverVersion",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "oAppVersion",
+    "sig": "oAppVersion()"
+  },
+  "0x18160ddd": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "totalSupply",
+    "sig": "totalSupply()"
+  },
+  "0x1881d94d": {
+    "abi": {
+      "inputs": [],
+      "name": "messageLibType",
+      "outputs": [
+        { "internalType": "enum MessageLibType", "name": "", "type": "uint8" }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "messageLibType",
+    "sig": "messageLibType()"
+  },
+  "0x20efd722": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_oapp", "type": "address" },
+        {
+          "components": [
+            { "internalType": "uint32", "name": "eid", "type": "uint32" },
+            {
+              "internalType": "uint32",
+              "name": "configType",
+              "type": "uint32"
+            },
+            { "internalType": "bytes", "name": "config", "type": "bytes" }
+          ],
+          "internalType": "struct SetConfigParam[]",
+          "name": "_params",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setConfig",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "setConfig",
+    "sig": "setConfig(address,(uint32,uint32,bytes)[])"
+  },
+  "0x23b872dd": {
+    "abi": {
+      "constant": false,
+      "inputs": [
+        { "name": "_from", "type": "address" },
+        { "name": "_to", "type": "address" },
+        { "name": "_value", "type": "uint256" }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "transferFrom",
+    "sig": "transferFrom(address,address,uint256)"
+  },
+  "0x2500510e": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_singleton", "type": "address" },
+        { "internalType": "bytes", "name": "initializer", "type": "bytes" },
+        { "internalType": "uint256", "name": "saltNonce", "type": "uint256" }
+      ],
+      "name": "calculateCreateProxyWithNonceAddress",
+      "outputs": [
+        {
+          "internalType": "contract GnosisSafeProxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "calculateCreateProxyWithNonceAddress",
+    "sig": "calculateCreateProxyWithNonceAddress(address,bytes,uint256)"
+  },
+  "0x26976e3f": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "upgradedAddress",
+      "outputs": [{ "name": "", "type": "address" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "upgradedAddress",
+    "sig": "upgradedAddress()"
+  },
+  "0x27e235e3": {
+    "abi": {
+      "constant": true,
+      "inputs": [{ "name": "", "type": "address" }],
+      "name": "balances",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "balances",
+    "sig": "balances(address)"
+  },
+  "0x29460b0b": {
+    "abi": {
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "uint32", "name": "eid", "type": "uint32" },
+            {
+              "components": [
+                {
+                  "internalType": "uint64",
+                  "name": "confirmations",
+                  "type": "uint64"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "requiredDVNCount",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "optionalDVNCount",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint8",
+                  "name": "optionalDVNThreshold",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "requiredDVNs",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "optionalDVNs",
+                  "type": "address[]"
+                }
+              ],
+              "internalType": "struct UlnConfig",
+              "name": "config",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct SetDefaultUlnConfigParam[]",
+          "name": "_params",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "setDefaultUlnConfigs",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "setDefaultUlnConfigs",
+    "sig": "setDefaultUlnConfigs((uint32,(uint64,uint8,uint8,uint8,address[],address[]))[])"
+  },
+  "0x2e64cec1": {
+    "abi": {
+      "inputs": [],
+      "name": "retrieve",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "retrieve",
+    "sig": "retrieve()"
+  },
+  "0x313ce567": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "decimals",
+    "sig": "decimals()"
+  },
+  "0x3400288b": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint32", "name": "_eid", "type": "uint32" },
+        { "internalType": "bytes32", "name": "_peer", "type": "bytes32" }
+      ],
+      "name": "setPeer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "setPeer",
+    "sig": "setPeer(uint32,bytes32)"
+  },
+  "0x35390714": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "maximumFee",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "maximumFee",
+    "sig": "maximumFee()"
+  },
+  "0x3659cfe6": {
+    "abi": {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "upgradeTo",
+    "sig": "upgradeTo(address)"
+  },
+  "0x39e3f938": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_oapp", "type": "address" },
+        { "internalType": "uint32", "name": "_remoteEid", "type": "uint32" }
+      ],
+      "name": "getAppUlnConfig",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "confirmations",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "requiredDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNThreshold",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "requiredDVNs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "optionalDVNs",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct UlnConfig",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "getAppUlnConfig",
+    "sig": "getAppUlnConfig(address,uint32)"
+  },
+  "0x3c782a52": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes32", "name": "headerHash", "type": "bytes32" },
+        { "internalType": "bytes32", "name": "payloadHash", "type": "bytes32" },
+        { "internalType": "address", "name": "dvn", "type": "address" }
+      ],
+      "name": "hashLookup",
+      "outputs": [
+        { "internalType": "bool", "name": "submitted", "type": "bool" },
+        { "internalType": "uint64", "name": "confirmations", "type": "uint64" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "hashLookup",
+    "sig": "hashLookup(bytes32,bytes32,address)"
+  },
+  "0x3ccfd60b": {
+    "abi": {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "withdraw",
+    "sig": "withdraw()"
+  },
+  "0x3eaaf86b": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "_totalSupply",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "_totalSupply",
+    "sig": "_totalSupply()"
+  },
+  "0x3f4ba83a": {
+    "abi": {
+      "constant": false,
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "unpause",
+    "sig": "unpause()"
+  },
+  "0x40bee835": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint256[]", "name": "amounts", "type": "uint256[]" },
+        { "internalType": "bytes32[]", "name": "names", "type": "bytes32[]" }
+      ],
+      "name": "placeBids",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "placeBids",
+    "sig": "placeBids(uint256[],bytes32[])"
+  },
+  "0x43ea4fa9": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_oapp", "type": "address" },
+        { "internalType": "uint32", "name": "_remoteEid", "type": "uint32" }
+      ],
+      "name": "getUlnConfig",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "confirmations",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "requiredDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNThreshold",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "requiredDVNs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "optionalDVNs",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct UlnConfig",
+          "name": "rtnConfig",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "getUlnConfig",
+    "sig": "getUlnConfig(address,uint32)"
+  },
+  "0x485cc955": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "endpoint_", "type": "address" },
+        { "internalType": "address", "name": "owner_", "type": "address" }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "initialize",
+    "sig": "initialize(address,address)"
+  },
+  "0x497ecfc5": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes32", "name": "name", "type": "bytes32" }
+      ],
+      "name": "placeBid",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "placeBid",
+    "sig": "placeBid(bytes32)"
+  },
+  "0x4f1ef286": {
+    "abi": {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        },
+        { "internalType": "bytes", "name": "data", "type": "bytes" }
+      ],
+      "name": "upgradeToAndCall",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "upgradeToAndCall",
+    "sig": "upgradeToAndCall(address,bytes)"
+  },
+  "0x52d1902d": {
+    "abi": {
+      "inputs": [],
+      "name": "proxiableUUID",
+      "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "proxiableUUID",
+    "sig": "proxiableUUID()"
+  },
+  "0x53e5d935": {
+    "abi": {
+      "inputs": [],
+      "name": "proxyCreationCode",
+      "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "proxyCreationCode",
+    "sig": "proxyCreationCode()"
+  },
+  "0x54fd4d50": {
+    "abi": {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        { "internalType": "uint64", "name": "major", "type": "uint64" },
+        { "internalType": "uint8", "name": "minor", "type": "uint8" },
+        { "internalType": "uint8", "name": "endpointVersion", "type": "uint8" }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "version",
+    "sig": "version()"
+  },
+  "0x59bf1abe": {
+    "abi": {
+      "constant": true,
+      "inputs": [{ "name": "_maker", "type": "address" }],
+      "name": "getBlackListStatus",
+      "outputs": [{ "name": "", "type": "bool" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "getBlackListStatus",
+    "sig": "getBlackListStatus(address)"
+  },
+  "0x5c60da1b": {
+    "abi": {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "implementation_",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "implementation",
+    "sig": "implementation()"
+  },
+  "0x5c658165": {
+    "abi": {
+      "constant": true,
+      "inputs": [
+        { "name": "", "type": "address" },
+        { "name": "", "type": "address" }
+      ],
+      "name": "allowed",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "allowed",
+    "sig": "allowed(address,address)"
+  },
+  "0x5c975abb": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [{ "name": "", "type": "bool" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "paused",
+    "sig": "paused()"
+  },
+  "0x5d3590d5": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_token", "type": "address" },
+        { "internalType": "address", "name": "_to", "type": "address" },
+        { "internalType": "uint256", "name": "_amount", "type": "uint256" }
+      ],
+      "name": "recoverFunds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "recoverFunds",
+    "sig": "recoverFunds(address,address,uint256)"
+  },
+  "0x5e280f11": {
+    "abi": {
+      "inputs": [],
+      "name": "endpoint",
+      "outputs": [
+        {
+          "internalType": "contract ILayerZeroEndpointV2",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "endpoint",
+    "sig": "endpoint()"
+  },
+  "0x6057361d": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint256", "name": "num", "type": "uint256" }
+      ],
+      "name": "store",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "store",
+    "sig": "store(uint256)"
+  },
+  "0x61b69abd": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "singleton", "type": "address" },
+        { "internalType": "bytes", "name": "data", "type": "bytes" }
+      ],
+      "name": "createProxy",
+      "outputs": [
+        {
+          "internalType": "contract GnosisSafeProxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "createProxy",
+    "sig": "createProxy(address,bytes)"
+  },
+  "0x65a69dcf": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "address", "name": "owner", "type": "address" },
+        { "internalType": "uint256", "name": "duration", "type": "uint256" },
+        { "internalType": "bytes32", "name": "secret", "type": "bytes32" },
+        { "internalType": "address", "name": "resolver", "type": "address" },
+        { "internalType": "bytes[]", "name": "data", "type": "bytes[]" },
+        { "internalType": "bool", "name": "reverseRecord", "type": "bool" },
+        {
+          "internalType": "uint16",
+          "name": "ownerControlledFuses",
+          "type": "uint16"
+        }
+      ],
+      "name": "makeCommitment",
+      "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "makeCommitment",
+    "sig": "makeCommitment(string,address,uint256,bytes32,address,bytes[],bool,uint16)"
+  },
+  "0x6750cd4c": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint32", "name": "_eid", "type": "uint32" }
+      ],
+      "name": "isSupportedEid",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "isSupportedEid",
+    "sig": "isSupportedEid(uint32)"
+  },
+  "0x6c2eb350": {
+    "abi": {
+      "inputs": [],
+      "name": "reinitialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "reinitialize",
+    "sig": "reinitialize()"
+  },
+  "0x70a08231": {
+    "abi": {
+      "constant": true,
+      "inputs": [{ "name": "who", "type": "address" }],
+      "name": "balanceOf",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "balanceOf",
+    "sig": "balanceOf(address)"
+  },
+  "0x715018a6": {
+    "abi": {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "renounceOwnership",
+    "sig": "renounceOwnership()"
+  },
+  "0x74694a2b": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "address", "name": "owner", "type": "address" },
+        { "internalType": "uint256", "name": "duration", "type": "uint256" },
+        { "internalType": "bytes32", "name": "secret", "type": "bytes32" },
+        { "internalType": "address", "name": "resolver", "type": "address" },
+        { "internalType": "bytes[]", "name": "data", "type": "bytes[]" },
+        { "internalType": "bool", "name": "reverseRecord", "type": "bool" },
+        {
+          "internalType": "uint16",
+          "name": "ownerControlledFuses",
+          "type": "uint16"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "register",
+    "sig": "register(string,address,uint256,bytes32,address,bytes[],bool,uint16)"
+  },
+  "0x7d25a05e": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint32", "name": "", "type": "uint32" },
+        { "internalType": "bytes32", "name": "", "type": "bytes32" }
+      ],
+      "name": "nextNonce",
+      "outputs": [
+        { "internalType": "uint64", "name": "nonce", "type": "uint64" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "nextNonce",
+    "sig": "nextNonce(uint32,bytes32)"
+  },
+  "0x80869853": {
+    "abi": {
+      "inputs": [],
+      "name": "reverseRegistrar",
+      "outputs": [
+        {
+          "internalType": "contract ReverseRegistrar",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "reverseRegistrar",
+    "sig": "reverseRegistrar()"
+  },
+  "0x839df945": {
+    "abi": {
+      "inputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+      "name": "commitments",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "commitments",
+    "sig": "commitments(bytes32)"
+  },
+  "0x83e7f6ff": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "uint256", "name": "duration", "type": "uint256" }
+      ],
+      "name": "rentPrice",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "uint256", "name": "base", "type": "uint256" },
+            { "internalType": "uint256", "name": "premium", "type": "uint256" }
+          ],
+          "internalType": "struct IPriceOracle.Price",
+          "name": "price",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "rentPrice",
+    "sig": "rentPrice(string,uint256)"
+  },
+  "0x8456cb59": {
+    "abi": {
+      "constant": false,
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "pause",
+    "sig": "pause()"
+  },
+  "0x893d20e8": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "getOwner",
+      "outputs": [{ "name": "", "type": "address" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "getOwner",
+    "sig": "getOwner()"
+  },
+  "0x8a95b09f": {
+    "abi": {
+      "inputs": [],
+      "name": "MIN_REGISTRATION_DURATION",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "MIN_REGISTRATION_DURATION",
+    "sig": "MIN_REGISTRATION_DURATION()"
+  },
+  "0x8d839ffe": {
+    "abi": {
+      "inputs": [],
+      "name": "minCommitmentAge",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "minCommitmentAge",
+    "sig": "minCommitmentAge()"
+  },
+  "0x8da5cb5b": {
+    "abi": {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "owner",
+    "sig": "owner()"
+  },
+  "0x95d89b41": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [{ "name": "", "type": "string" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "symbol",
+    "sig": "symbol()"
+  },
+  "0x9791c097": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" }
+      ],
+      "name": "valid",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "valid",
+    "sig": "valid(string)"
+  },
+  "0x9c33abf7": {
+    "abi": {
+      "inputs": [
+        { "internalType": "uint32", "name": "_eid", "type": "uint32" },
+        { "internalType": "address", "name": "_oapp", "type": "address" },
+        { "internalType": "uint32", "name": "_configType", "type": "uint32" }
+      ],
+      "name": "getConfig",
+      "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "getConfig",
+    "sig": "getConfig(uint32,address,uint32)"
+  },
+  "0xa8e5fbc0": {
+    "abi": {
+      "inputs": [],
+      "name": "nameWrapper",
+      "outputs": [
+        {
+          "internalType": "contract INameWrapper",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "nameWrapper",
+    "sig": "nameWrapper()"
+  },
+  "0xa9059cbb": {
+    "abi": {
+      "constant": false,
+      "inputs": [
+        { "name": "_to", "type": "address" },
+        { "name": "_value", "type": "uint256" }
+      ],
+      "name": "transfer",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "transfer",
+    "sig": "transfer(address,uint256)"
+  },
+  "0xacf1a841": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" },
+        { "internalType": "uint256", "name": "duration", "type": "uint256" }
+      ],
+      "name": "renew",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    "name": "renew",
+    "sig": "renew(string,uint256)"
+  },
+  "0xaddacc0f": {
+    "abi": {
+      "inputs": [],
+      "name": "proxyRuntimeCode",
+      "outputs": [{ "internalType": "bytes", "name": "", "type": "bytes" }],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "proxyRuntimeCode",
+    "sig": "proxyRuntimeCode()"
+  },
+  "0xaeb8ce9b": {
+    "abi": {
+      "inputs": [
+        { "internalType": "string", "name": "name", "type": "string" }
+      ],
+      "name": "available",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "available",
+    "sig": "available(string)"
+  },
+  "0xb92d0eff": {
+    "abi": {
+      "inputs": [],
+      "name": "composeMsgSender",
+      "outputs": [
+        { "internalType": "address", "name": "sender", "type": "address" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "composeMsgSender",
+    "sig": "composeMsgSender()"
+  },
+  "0xbb0b6a53": {
+    "abi": {
+      "inputs": [{ "internalType": "uint32", "name": "eid", "type": "uint32" }],
+      "name": "peers",
+      "outputs": [
+        { "internalType": "bytes32", "name": "peer", "type": "bytes32" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "peers",
+    "sig": "peers(uint32)"
+  },
+  "0xc0324c77": {
+    "abi": {
+      "constant": false,
+      "inputs": [
+        { "name": "newBasisPoints", "type": "uint256" },
+        { "name": "newMaxFee", "type": "uint256" }
+      ],
+      "name": "setParams",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "setParams",
+    "sig": "setParams(uint256,uint256)"
+  },
+  "0xc40ff835": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes", "name": "_packetHeader", "type": "bytes" },
+        { "internalType": "uint32", "name": "_localEid", "type": "uint32" }
+      ],
+      "name": "assertHeader",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    "name": "assertHeader",
+    "sig": "assertHeader(bytes,uint32)"
+  },
+  "0xca5eb5e1": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_delegate", "type": "address" }
+      ],
+      "name": "setDelegate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "setDelegate",
+    "sig": "setDelegate(address)"
+  },
+  "0xcc872b66": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "amount", "type": "uint256" }],
+      "name": "issue",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "issue",
+    "sig": "issue(uint256)"
+  },
+  "0xce1e09c0": {
+    "abi": {
+      "inputs": [],
+      "name": "maxCommitmentAge",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "maxCommitmentAge",
+    "sig": "maxCommitmentAge()"
+  },
+  "0xd18af54d": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "_singleton", "type": "address" },
+        { "internalType": "bytes", "name": "initializer", "type": "bytes" },
+        { "internalType": "uint256", "name": "saltNonce", "type": "uint256" },
+        {
+          "internalType": "contract IProxyCreationCallback",
+          "name": "callback",
+          "type": "address"
+        }
+      ],
+      "name": "createProxyWithCallback",
+      "outputs": [
+        {
+          "internalType": "contract GnosisSafeProxy",
+          "name": "proxy",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "createProxyWithCallback",
+    "sig": "createProxyWithCallback(address,bytes,uint256,address)"
+  },
+  "0xd3419bf3": {
+    "abi": {
+      "inputs": [],
+      "name": "prices",
+      "outputs": [
+        {
+          "internalType": "contract IPriceOracle",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "prices",
+    "sig": "prices()"
+  },
+  "0xdb006a75": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "amount", "type": "uint256" }],
+      "name": "redeem",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "redeem",
+    "sig": "redeem(uint256)"
+  },
+  "0xdd62ed3e": {
+    "abi": {
+      "constant": true,
+      "inputs": [
+        { "name": "_owner", "type": "address" },
+        { "name": "_spender", "type": "address" }
+      ],
+      "name": "allowance",
+      "outputs": [{ "name": "remaining", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "allowance",
+    "sig": "allowance(address,address)"
+  },
+  "0xdd644f72": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "basisPointsRate",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "basisPointsRate",
+    "sig": "basisPointsRate()"
+  },
+  "0xe084d952": {
+    "abi": {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "confirmations",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint8",
+              "name": "requiredDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNCount",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "optionalDVNThreshold",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address[]",
+              "name": "requiredDVNs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "optionalDVNs",
+              "type": "address[]"
+            }
+          ],
+          "internalType": "struct UlnConfig",
+          "name": "_config",
+          "type": "tuple"
+        },
+        { "internalType": "bytes32", "name": "_headerHash", "type": "bytes32" },
+        { "internalType": "bytes32", "name": "_payloadHash", "type": "bytes32" }
+      ],
+      "name": "verifiable",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "verifiable",
+    "sig": "verifiable((uint64,uint8,uint8,uint8,address[],address[]),bytes32,bytes32)"
+  },
+  "0xe47d6060": {
+    "abi": {
+      "constant": true,
+      "inputs": [{ "name": "", "type": "address" }],
+      "name": "isBlackListed",
+      "outputs": [{ "name": "", "type": "bool" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "isBlackListed",
+    "sig": "isBlackListed(address)"
+  },
+  "0xe4997dc5": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "_clearedUser", "type": "address" }],
+      "name": "removeBlackList",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "removeBlackList",
+    "sig": "removeBlackList(address)"
+  },
+  "0xe5b5019a": {
+    "abi": {
+      "constant": true,
+      "inputs": [],
+      "name": "MAX_UINT",
+      "outputs": [{ "name": "", "type": "uint256" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "MAX_UINT",
+    "sig": "MAX_UINT()"
+  },
+  "0xf14fcbc8": {
+    "abi": {
+      "inputs": [
+        { "internalType": "bytes32", "name": "commitment", "type": "bytes32" }
+      ],
+      "name": "commit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "commit",
+    "sig": "commit(bytes32)"
+  },
+  "0xf2fde38b": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address", "name": "newOwner", "type": "address" }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "transferOwnership",
+    "sig": "transferOwnership(address)"
+  },
+  "0xf3bdc228": {
+    "abi": {
+      "constant": false,
+      "inputs": [{ "name": "_blackListedUser", "type": "address" }],
+      "name": "destroyBlackFunds",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "destroyBlackFunds",
+    "sig": "destroyBlackFunds(address)"
+  },
+  "0xf3fef3a3": {
+    "abi": {
+      "inputs": [
+        { "internalType": "address payable", "name": "to_", "type": "address" },
+        { "internalType": "uint256", "name": "amount", "type": "uint256" }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "withdraw",
+    "sig": "withdraw(address,uint256)"
+  },
+  "0xf851a440": {
+    "abi": {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        { "internalType": "address", "name": "admin_", "type": "address" }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    "name": "admin",
+    "sig": "admin()"
+  },
+  "0xff7bd03d": {
+    "abi": {
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "uint32", "name": "srcEid", "type": "uint32" },
+            { "internalType": "bytes32", "name": "sender", "type": "bytes32" },
+            { "internalType": "uint64", "name": "nonce", "type": "uint64" }
+          ],
+          "internalType": "struct Origin",
+          "name": "origin",
+          "type": "tuple"
+        }
+      ],
+      "name": "allowInitializePath",
+      "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    "name": "allowInitializePath",
+    "sig": "allowInitializePath((uint32,bytes32,uint64))"
+  }
+}

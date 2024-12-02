@@ -1,0 +1,2073 @@
+{
+  "0x0c396cd989a39f4459b5fa1aed6a9a8dcdbc45908acfd67e028cd568da98982c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickLower",
+          "type": "int24"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickUpper",
+          "type": "int24"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    "name": "Burn",
+    "sig": "Burn(address,int24,int24,uint128,uint256,uint256)"
+  },
+  "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pair",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "PairCreated",
+      "type": "event"
+    },
+    "name": "PairCreated",
+    "sig": "PairCreated(address,address,address,uint256)"
+  },
+  "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    "name": "Mint",
+    "sig": "Mint(address,uint256)"
+  },
+  "0x117e3210bb9aa7d9baff172026820255c6f6c30ba8999d1c2fd88e2848137c4e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "UnBlacklisted",
+      "type": "event"
+    },
+    "name": "UnBlacklisted",
+    "sig": "UnBlacklisted(address)"
+  },
+  "0x1584ad594a70cbe1e6515592e1272a987d922b097ead875069cebe8b40c004a4": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "_useCustomAdapterParams",
+          "type": "bool"
+        }
+      ],
+      "name": "SetUseCustomAdapterParams",
+      "type": "event"
+    },
+    "name": "SetUseCustomAdapterParams",
+    "sig": "SetUseCustomAdapterParams(bool)"
+  },
+  "0x15eeaa57c7bd188c1388020bcadc2c436ec60d647d36ef5b9eb3c742217ddee1": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": false, "name": "sender", "type": "address" },
+        { "indexed": false, "name": "value", "type": "uint256" }
+      ],
+      "name": "ProxyDeposit",
+      "type": "event"
+    },
+    "name": "ProxyDeposit",
+    "sig": "ProxyDeposit(address,uint256)"
+  },
+  "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint112",
+          "name": "reserve0",
+          "type": "uint112"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint112",
+          "name": "reserve1",
+          "type": "uint112"
+        }
+      ],
+      "name": "Sync",
+      "type": "event"
+    },
+    "name": "Sync",
+    "sig": "Sync(uint112,uint112)"
+  },
+  "0x1c7f382531621f02aefb4212478bba8871ffad078202bdbba87f3e21d639aebb": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "RecoveryAdminChanged",
+      "type": "event"
+    },
+    "name": "RecoveryAdminChanged",
+    "sig": "RecoveryAdminChanged(address,address)"
+  },
+  "0x1ce8f322f2093495d27a3f4079a226305dfdf23b38c55ef932a113d61c8eb762": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "str1",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "str2",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "b1",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes13",
+          "name": "b13",
+          "type": "bytes13"
+        }
+      ],
+      "name": "Test5",
+      "type": "event"
+    },
+    "name": "Test5",
+    "sig": "Test5(string,string,bytes,bytes13)"
+  },
+  "0x1cf3b03a6cf19fa2baba4df148e9dcabedea7f8a5c07840e207e5c089be95d3e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beacon",
+          "type": "address"
+        }
+      ],
+      "name": "BeaconUpgraded",
+      "type": "event"
+    },
+    "name": "BeaconUpgraded",
+    "sig": "BeaconUpgraded(address)"
+  },
+  "0x2422cac5e23c46c890fdcf42d0c64757409df6832174df639337558f09d99c68": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "src",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RewardClaimed",
+      "type": "event"
+    },
+    "name": "RewardClaimed",
+    "sig": "RewardClaimed(address,address,address,uint256)"
+  },
+  "0x2cfce4af01bcb9d6cf6c84ee1b7c491100b8695368264146a94d71e10a63083f": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "name": "from", "type": "address" },
+        { "indexed": false, "name": "value", "type": "uint256" }
+      ],
+      "name": "Unfreeze",
+      "type": "event"
+    },
+    "name": "Unfreeze",
+    "sig": "Unfreeze(address,uint256)"
+  },
+  "0x2e663179c8bdcdd965b243f8fa894aedd239ccc5206dcb0f9321a5302f55cc75": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes13",
+          "name": "value1",
+          "type": "bytes13"
+        },
+        {
+          "indexed": true,
+          "internalType": "string",
+          "name": "value2",
+          "type": "string"
+        }
+      ],
+      "name": "Test6",
+      "type": "event"
+    },
+    "name": "Test6",
+    "sig": "Test6(bytes13,string)"
+  },
+  "0x2f8788117e7eff1d82e926ec794901d17c78024a50270940304540a733656f0d": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleGranted",
+      "type": "event"
+    },
+    "name": "RoleGranted",
+    "sig": "RoleGranted(bytes32,address,address)"
+  },
+  "0x3134e8a2e6d97e929a7e54011ea5485d7d196dd5f0ba4d4ef95803e8e3fc257f": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "delegator",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "fromDelegate",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "toDelegate",
+          "type": "address"
+        }
+      ],
+      "name": "DelegateChanged",
+      "type": "event"
+    },
+    "name": "DelegateChanged",
+    "sig": "DelegateChanged(address,address,address)"
+  },
+  "0x39a4c66499bcf4b56d79f0dde8ed7a9d4925a0df55825206b2b8531e202be0d0": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_toAddress",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "SendToChain",
+      "type": "event"
+    },
+    "name": "SendToChain",
+    "sig": "SendToChain(uint16,address,bytes,uint256)"
+  },
+  "0x3b0007eb941cf645526cbb3a4fdaecda9d28ce4843167d9263b536a1f1edc0f6": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "minter",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newMinter",
+          "type": "address"
+        }
+      ],
+      "name": "MinterChanged",
+      "type": "event"
+    },
+    "name": "MinterChanged",
+    "sig": "MinterChanged(address,address)"
+  },
+  "0x42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [{ "indexed": false, "name": "_user", "type": "address" }],
+      "name": "AddedBlackList",
+      "type": "event"
+    },
+    "name": "AddedBlackList",
+    "sig": "AddedBlackList(address)"
+  },
+  "0x4847e8a3fd8d5acb15c2688cb6369d0382f42d5e5dd093514108e6def14c965c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "value1",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value2",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "value3",
+          "type": "bytes"
+        }
+      ],
+      "name": "Test8",
+      "type": "event"
+    },
+    "name": "Test8",
+    "sig": "Test8(address,uint256,bytes)"
+  },
+  "0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    "name": "Mint",
+    "sig": "Mint(address,uint256,uint256)"
+  },
+  "0x596b573906218d3411850b26a6b437d6c4522fdb43d2d2386263f86d50b8b151": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount0",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount1",
+          "type": "uint128"
+        }
+      ],
+      "name": "CollectProtocol",
+      "type": "event"
+    },
+    "name": "CollectProtocol",
+    "sig": "CollectProtocol(address,address,uint128,uint128)"
+  },
+  "0x5b534e2716e5ad68b9f67521378f8199a7ceb9d3f6f354275dad33fe42cf710a": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [],
+      "name": "LosslessTurnedOff",
+      "type": "event"
+    },
+    "name": "LosslessTurnedOff",
+    "sig": "LosslessTurnedOff()"
+  },
+  "0x5d1abb02e80cfbbc9989826554a455439e65fa2901582f434d6390776ad33209": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "address", "name": "value1", "type": "address" },
+            { "internalType": "uint256", "name": "value2", "type": "uint256" },
+            { "internalType": "string", "name": "value3", "type": "string" }
+          ],
+          "indexed": false,
+          "internalType": "struct Test.s1",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "name": "Test7",
+      "type": "event"
+    },
+    "name": "Test7",
+    "sig": "Test7((address,uint256,string))"
+  },
+  "0x5db758e995a17ec1ad84bdef7e8c3293a0bd6179bcce400dff5d4c3d87db726b": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "precrime",
+          "type": "address"
+        }
+      ],
+      "name": "SetPrecrime",
+      "type": "event"
+    },
+    "name": "SetPrecrime",
+    "sig": "SetPrecrime(address)"
+  },
+  "0x5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    "name": "Unpaused",
+    "sig": "Unpaused(address)"
+  },
+  "0x61e6e66b0d6339b2980aecc6ccc0039736791f0ccde9ed512e789a7fbdd698c6": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": false, "name": "_blackListedUser", "type": "address" },
+        { "indexed": false, "name": "_balance", "type": "uint256" }
+      ],
+      "name": "DestroyedBlackFunds",
+      "type": "event"
+    },
+    "name": "DestroyedBlackFunds",
+    "sig": "DestroyedBlackFunds(address,uint256)"
+  },
+  "0x62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    "name": "Paused",
+    "sig": "Paused(address)"
+  },
+  "0x6985a02210a168e66602d3235cb6db0e70f92b3ba4d376a33c0f3d9434bff625": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Pause",
+      "type": "event"
+    },
+    "name": "Pause",
+    "sig": "Pause()"
+  },
+  "0x6fadb1c244276388aee22be93b919985a18748c021e5d48553957a48101a2560": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldGovernor",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newGovernor",
+          "type": "address"
+        }
+      ],
+      "name": "GovernorTransferred",
+      "type": "event"
+    },
+    "name": "GovernorTransferred",
+    "sig": "GovernorTransferred(address,address)"
+  },
+  "0x702d5967f45f6513a38ffc42d6ba9bf230bd40e8f53b16363c7eb4fd2deb9a44": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [{ "indexed": false, "name": "amount", "type": "uint256" }],
+      "name": "Redeem",
+      "type": "event"
+    },
+    "name": "Redeem",
+    "sig": "Redeem(uint256)"
+  },
+  "0x70935338e69775456a85ddef226c395fb668b63fa0115f5f20610b388e6ca9c0": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickLower",
+          "type": "int24"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickUpper",
+          "type": "int24"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount0",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount1",
+          "type": "uint128"
+        }
+      ],
+      "name": "Collect",
+      "type": "event"
+    },
+    "name": "Collect",
+    "sig": "Collect(address,address,int24,int24,uint128,uint128)"
+  },
+  "0x7805862f689e2f13df9f062ff482ad3ad112aca9e0847911ed832e158c525b33": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Unpause",
+      "type": "event"
+    },
+    "name": "Unpause",
+    "sig": "Unpause()"
+  },
+  "0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        },
+        {
+          "indexed": false,
+          "internalType": "int24",
+          "name": "tickSpacing",
+          "type": "int24"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pool",
+          "type": "address"
+        }
+      ],
+      "name": "PoolCreated",
+      "type": "event"
+    },
+    "name": "PoolCreated",
+    "sig": "PoolCreated(address,address,uint24,int24,address)"
+  },
+  "0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickLower",
+          "type": "int24"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickUpper",
+          "type": "int24"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "amount",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    "name": "Mint",
+    "sig": "Mint(address,address,int24,int24,uint128,uint256,uint256)"
+  },
+  "0x7e644d79422f17c01e4894b5f4f588d331ebfa28653d42ae832dc59e38c9798f": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "AdminChanged",
+      "type": "event"
+    },
+    "name": "AdminChanged",
+    "sig": "AdminChanged(address,address)"
+  },
+  "0x807b2597076c7d1d89a0e75ce92543084a1bea3d6ea5485ed07724f82db3f291": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "value1",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "value2",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value3",
+          "type": "uint256"
+        }
+      ],
+      "name": "Test1",
+      "type": "event"
+    },
+    "name": "Test1",
+    "sig": "Test1(uint16,uint16,uint256)"
+  },
+  "0x88e0be0448355c71674462d3cb36342f0d085f7b43a1deab03052c95eb158709": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "turnOffDate",
+          "type": "uint256"
+        }
+      ],
+      "name": "LosslessTurnOffProposed",
+      "type": "event"
+    },
+    "name": "LosslessTurnOffProposed",
+    "sig": "LosslessTurnOffProposed(uint256)"
+  },
+  "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    "name": "OwnershipTransferred",
+    "sig": "OwnershipTransferred(address,address)"
+  },
+  "0x8c0400cfe2d1199b1a725c78960bcc2a344d869b80590d0f2bd005db15a572ce": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_remoteChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_remoteAddress",
+          "type": "bytes"
+        }
+      ],
+      "name": "SetTrustedRemoteAddress",
+      "type": "event"
+    },
+    "name": "SetTrustedRemoteAddress",
+    "sig": "SetTrustedRemoteAddress(uint16,bytes)"
+  },
+  "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    "name": "Approval",
+    "sig": "Approval(address,address,uint256)"
+  },
+  "0x916a969fd66f151c6f2182046089a212cd7b3c58ef1ebb26a214e85d7746dfff": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "value1",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "value2",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value3",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "value4",
+          "type": "bool"
+        }
+      ],
+      "name": "Test2",
+      "type": "event"
+    },
+    "name": "Test2",
+    "sig": "Test2(address,uint16,uint256,bool)"
+  },
+  "0x91ac266cd086f18b7ffd086a95d55abd7d8cf1508297642e79ec1efe43eb8056": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "components": [
+            { "internalType": "address", "name": "value1", "type": "address" },
+            { "internalType": "uint256", "name": "value2", "type": "uint256" },
+            { "internalType": "string", "name": "value3", "type": "string" }
+          ],
+          "indexed": false,
+          "internalType": "struct Test.s1",
+          "name": "",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "value1",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "value2",
+                  "type": "uint256"
+                },
+                { "internalType": "string", "name": "value3", "type": "string" }
+              ],
+              "internalType": "struct Test.s1",
+              "name": "value1",
+              "type": "tuple"
+            },
+            { "internalType": "uint256", "name": "value2", "type": "uint256" },
+            {
+              "internalType": "uint256[]",
+              "name": "value3",
+              "type": "uint256[]"
+            }
+          ],
+          "indexed": false,
+          "internalType": "struct Test.s2",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "name": "Test10",
+      "type": "event"
+    },
+    "name": "Test10",
+    "sig": "Test10((address,uint256,string),((address,uint256,string),uint256,uint256[]))"
+  },
+  "0x95bb211a5a393c4d30c3edc9a745825fba4e6ad3e3bb949e6bf8ccdfe431a811": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousPauser",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newPauser",
+          "type": "address"
+        }
+      ],
+      "name": "PauserChanged",
+      "type": "event"
+    },
+    "name": "PauserChanged",
+    "sig": "PauserChanged(address,address)"
+  },
+  "0x973d8d92bb299f4af6ce49b52a8adb85ae46b9f214c4c4fc06ac77401237b133": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "feeProtocol0Old",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "feeProtocol1Old",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "feeProtocol0New",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "feeProtocol1New",
+          "type": "uint8"
+        }
+      ],
+      "name": "SetFeeProtocol",
+      "type": "event"
+    },
+    "name": "SetFeeProtocol",
+    "sig": "SetFeeProtocol(uint8,uint8,uint8,uint8)"
+  },
+  "0x98636036cb66a9c19a37435efc1e90142190214e8abeb821bdba3f2990dd4c95": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint160",
+          "name": "sqrtPriceX96",
+          "type": "uint160"
+        },
+        {
+          "indexed": false,
+          "internalType": "int24",
+          "name": "tick",
+          "type": "int24"
+        }
+      ],
+      "name": "Initialize",
+      "type": "event"
+    },
+    "name": "Initialize",
+    "sig": "Initialize(uint160,int24)"
+  },
+  "0x9ad5f5ce6facfceb479b8f4aff33f37ce415d4cfed23716c2c5bd0d3fa8a8a55": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes1",
+          "name": "value1",
+          "type": "bytes1"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes2",
+          "name": "value2",
+          "type": "bytes2"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes3",
+          "name": "value3",
+          "type": "bytes3"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "value4",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "value5",
+          "type": "bytes"
+        }
+      ],
+      "name": "Test9",
+      "type": "event"
+    },
+    "name": "Test9",
+    "sig": "Test9(bytes1,bytes2,bytes3,bytes32,bytes)"
+  },
+  "0x9d5c7c0b934da8fefa9c7760c98383778a12dfbfc0c3b3106518f43fb9508ac0": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_dstChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_type",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_minDstGas",
+          "type": "uint256"
+        }
+      ],
+      "name": "SetMinDstGas",
+      "type": "event"
+    },
+    "name": "SetMinDstGas",
+    "sig": "SetMinDstGas(uint16,uint16,uint256)"
+  },
+  "0xa4a40bdd0a809720a61b44f1b3497ce7dad87741a0ba3b961c2e65e645060e70": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [],
+      "name": "LosslessTurnedOn",
+      "type": "event"
+    },
+    "name": "LosslessTurnedOn",
+    "sig": "LosslessTurnedOn()"
+  },
+  "0xa70e45c1bee2c6cd8301327a83111981a2e8c5fc94834f00530bc40e1983892e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "Retrieved",
+      "type": "event"
+    },
+    "name": "Retrieved",
+    "sig": "Retrieved(uint256)"
+  },
+  "0xa945e51eec50ab98c161376f0db4cf2aeba3ec92755fe2fcd388bdbbb80ff196": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "commitment",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "leafIndex",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    "name": "Deposit",
+    "sig": "Deposit(bytes32,uint32,uint256)"
+  },
+  "0xac49e518f90a358f652e4400164f05a5d8f7e35e7747279bc3a93dbf584e125a": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "observationCardinalityNextOld",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "observationCardinalityNextNew",
+          "type": "uint16"
+        }
+      ],
+      "name": "IncreaseObservationCardinalityNext",
+      "type": "event"
+    },
+    "name": "IncreaseObservationCardinalityNext",
+    "sig": "IncreaseObservationCardinalityNext(uint16,uint16)"
+  },
+  "0xb044a1e409eac5c48e5af22d4af52670dd1a99059537a78b31b48c6500a6354e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": false, "name": "feeBasisPoints", "type": "uint256" },
+        { "indexed": false, "name": "maxFee", "type": "uint256" }
+      ],
+      "name": "Params",
+      "type": "event"
+    },
+    "name": "Params",
+    "sig": "Params(uint256,uint256)"
+  },
+  "0xb532073b38c83145e3e5135377a08bf9aab55bc0fd7c1179cd4fb995d2a5159c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "oldOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnerChanged",
+      "type": "event"
+    },
+    "name": "OwnerChanged",
+    "sig": "OwnerChanged(address,address)"
+  },
+  "0xbc7cd75a20ee27fd9adebab32041f755214dbc6bffa90cc0225b39da2e5c2d3b": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    "name": "Upgraded",
+    "sig": "Upgraded(address)"
+  },
+  "0xbd79b86ffe0ab8e8776151514217cd7cacd52c909f66475c3af44e129f0b00ff": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "previousAdminRole",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "newAdminRole",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RoleAdminChanged",
+      "type": "event"
+    },
+    "name": "RoleAdminChanged",
+    "sig": "RoleAdminChanged(bytes32,bytes32,bytes32)"
+  },
+  "0xbdbdb71d7860376ba52b25a5028beea23581364a40522f6bcfb86bb1f2dca633": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paid0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "paid1",
+          "type": "uint256"
+        }
+      ],
+      "name": "Flash",
+      "type": "event"
+    },
+    "name": "Flash",
+    "sig": "Flash(address,address,uint256,uint256,uint256,uint256)"
+  },
+  "0xbf551ec93859b170f9b2141bd9298bf3f64322c6f7beb2543a0cb669834118bf": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint16",
+          "name": "_srcChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "ReceiveFromChain",
+      "type": "event"
+    },
+    "name": "ReceiveFromChain",
+    "sig": "ReceiveFromChain(uint16,address,uint256)"
+  },
+  "0xc264d91f3adc5588250e1551f547752ca0cfa8f6b530d243b9f9f4cab10ea8e5": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_srcChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_srcAddress",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "_nonce",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_payloadHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "RetryMessageSuccess",
+      "type": "event"
+    },
+    "name": "RetryMessageSuccess",
+    "sig": "RetryMessageSuccess(uint16,bytes,uint64,bytes32)"
+  },
+  "0xc42079f94a6350d7e6235f29174924f928cc2ac818eb64fed8004e115fbcca67": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "amount0",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "amount1",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint160",
+          "name": "sqrtPriceX96",
+          "type": "uint160"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint128",
+          "name": "liquidity",
+          "type": "uint128"
+        },
+        {
+          "indexed": false,
+          "internalType": "int24",
+          "name": "tick",
+          "type": "int24"
+        }
+      ],
+      "name": "Swap",
+      "type": "event"
+    },
+    "name": "Swap",
+    "sig": "Swap(address,address,int256,int256,uint160,uint128,int24)"
+  },
+  "0xc5666bfdfb79a4b0b4abdbc565d6e9937a263233b2b378c55132d34dc5784a36": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "candidate",
+          "type": "address"
+        }
+      ],
+      "name": "RecoveryAdminChangeProposed",
+      "type": "event"
+    },
+    "name": "RecoveryAdminChangeProposed",
+    "sig": "RecoveryAdminChangeProposed(address)"
+  },
+  "0xc5fd2123e81fef95da129f6434f193493de076f17858a9929d25ca863f54c7c4": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address[]",
+          "name": "value1",
+          "type": "address[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool[]",
+          "name": "value2",
+          "type": "bool[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "value3",
+          "type": "uint256[]"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256[][]",
+          "name": "value4",
+          "type": "uint256[][]"
+        }
+      ],
+      "name": "Test11",
+      "type": "event"
+    },
+    "name": "Test11",
+    "sig": "Test11(address[],bool[],uint256[],uint256[][])"
+  },
+  "0xc66a3fdf07232cdd185febcc6579d408c241b47ae2f9907d84be655141eeaecc": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint24",
+          "name": "fee",
+          "type": "uint24"
+        },
+        {
+          "indexed": true,
+          "internalType": "int24",
+          "name": "tickSpacing",
+          "type": "int24"
+        }
+      ],
+      "name": "FeeAmountEnabled",
+      "type": "event"
+    },
+    "name": "FeeAmountEnabled",
+    "sig": "FeeAmountEnabled(uint24,int24)"
+  },
+  "0xc67398012c111ce95ecb7429b933096c977380ee6c421175a71a4a4c6c88c06e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newBlacklister",
+          "type": "address"
+        }
+      ],
+      "name": "BlacklisterChanged",
+      "type": "event"
+    },
+    "name": "BlacklisterChanged",
+    "sig": "BlacklisterChanged(address)"
+  },
+  "0xc6d8c0af6d21f291e7c359603aa97e0ed500f04db6e983b9fce75a91c6b8da6b": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "Stored",
+      "type": "event"
+    },
+    "name": "Stored",
+    "sig": "Stored(uint256)"
+  },
+  "0xcb8241adb0c3fdb35b70c24ce35c5eb0c17af7431c99f827d44a445ca624176a": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [{ "indexed": false, "name": "amount", "type": "uint256" }],
+      "name": "Issue",
+      "type": "event"
+    },
+    "name": "Issue",
+    "sig": "Issue(uint256)"
+  },
+  "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "name": "from", "type": "address" },
+        { "indexed": false, "name": "value", "type": "uint256" }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    "name": "Burn",
+    "sig": "Burn(address,uint256)"
+  },
+  "0xcc358699805e9a8b7f77b522628c7cb9abd07d9efb86b6fb616af1609036a99e": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [{ "indexed": false, "name": "newAddress", "type": "address" }],
+      "name": "Deprecate",
+      "type": "event"
+    },
+    "name": "Deprecate",
+    "sig": "Deprecate(address)"
+  },
+  "0xcf347e3bf631ba9b13cfadd4d45c74721a253f6c8d14cd70c7cefaafe09a840c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value1",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "value2",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "value3",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "value4",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "value5",
+          "type": "bool"
+        }
+      ],
+      "name": "Test3",
+      "type": "event"
+    },
+    "name": "Test3",
+    "sig": "Test3(uint256,int256,address,string,bool)"
+  },
+  "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0In",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1In",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0Out",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1Out",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "Swap",
+      "type": "event"
+    },
+    "name": "Swap",
+    "sig": "Swap(address,uint256,uint256,uint256,uint256,address)"
+  },
+  "0xd7e9ec6e6ecd65492dce6bf513cd6867560d49544421d0783ddf06e76c24470c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [{ "indexed": false, "name": "_user", "type": "address" }],
+      "name": "RemovedBlackList",
+      "type": "event"
+    },
+    "name": "RemovedBlackList",
+    "sig": "RemovedBlackList(address)"
+  },
+  "0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount0",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount1",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    "name": "Burn",
+    "sig": "Burn(address,uint256,uint256,address)"
+  },
+  "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    "name": "Transfer",
+    "sig": "Transfer(address,address,uint256)"
+  },
+  "0xdec2bacdd2f05b59de34da9b523dff8be42e5e38e818c82fdb0bae774387a724": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "delegate",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "previousBalance",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "newBalance",
+          "type": "uint256"
+        }
+      ],
+      "name": "DelegateVotesChanged",
+      "type": "event"
+    },
+    "name": "DelegateVotesChanged",
+    "sig": "DelegateVotesChanged(address,uint256,uint256)"
+  },
+  "0xe183f33de2837795525b4792ca4cd60535bd77c53b7e7030060bfcf5734d6b0c": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_srcChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_srcAddress",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "_nonce",
+          "type": "uint64"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_payload",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_reason",
+          "type": "bytes"
+        }
+      ],
+      "name": "MessageFailed",
+      "type": "event"
+    },
+    "name": "MessageFailed",
+    "sig": "MessageFailed(uint16,bytes,uint64,bytes,bytes)"
+  },
+  "0xe9ccd499291820a7bc36f3c44549e8f78189ef8de85cda874fdec9cdfb575d69": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "value1",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "int256",
+          "name": "value2",
+          "type": "int256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "value3",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "value4",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "value5",
+          "type": "bool"
+        }
+      ],
+      "name": "Test4",
+      "type": "event"
+    },
+    "name": "Test4",
+    "sig": "Test4(uint256,int256,address,string,bool)"
+  },
+  "0xe9e508bad6d4c3227e881ca19068f099da81b5164dd6d62b2eaf1e8bc6c34931": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "nullifierHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "relayer",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "name": "Withdrawal",
+      "type": "event"
+    },
+    "name": "Withdrawal",
+    "sig": "Withdrawal(address,bytes32,address,uint256)"
+  },
+  "0xf6391f5c32d9c69d2a47ea670b442974b53935d1edc7fd64eb21e047a839171b": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "role",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "RoleRevoked",
+      "type": "event"
+    },
+    "name": "RoleRevoked",
+    "sig": "RoleRevoked(bytes32,address,address)"
+  },
+  "0xf97a274face0b5517365ad396b1fdba6f68bd3135ef603e44272adba3af5a1e0": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        { "indexed": true, "name": "from", "type": "address" },
+        { "indexed": false, "name": "value", "type": "uint256" }
+      ],
+      "name": "Freeze",
+      "type": "event"
+    },
+    "name": "Freeze",
+    "sig": "Freeze(address,uint256)"
+  },
+  "0xfa41487ad5d6728f0b19276fa1eddc16558578f5109fc39d2dc33c3230470dab": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint16",
+          "name": "_remoteChainId",
+          "type": "uint16"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "_path",
+          "type": "bytes"
+        }
+      ],
+      "name": "SetTrustedRemote",
+      "type": "event"
+    },
+    "name": "SetTrustedRemote",
+    "sig": "SetTrustedRemote(uint16,bytes)"
+  },
+  "0xffa4e6181777692565cf28528fc88fd1516ea86b56da075235fa575af6a4b855": {
+    "abi": {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Blacklisted",
+      "type": "event"
+    },
+    "name": "Blacklisted",
+    "sig": "Blacklisted(address)"
+  }
+}

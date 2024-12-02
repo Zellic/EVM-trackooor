@@ -1,0 +1,38 @@
+{
+    "rpcurl":"wss://...",
+    "actions":{
+        "Logging":{
+            "addresses":{
+                "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48":{}
+            },
+            "options":{
+                "log-events": true,
+                "log-transactions": true,
+                "log-blocks": true,
+                "log-any-deployments": true,
+                "determine-tx-type": false,
+                "enable-terminal-logs": true,
+                "enable-discord-logs": false,
+                "discord-log-options": {
+                    "webhook-url": "...",
+                    "username": "evm trackooor",
+                    "avatar-url": "...",
+                    "buffer-webhook-messages": true,
+                    "retry-webhook-messages": false
+                }
+            },
+            "enabled":true
+        },
+        "TornadoCash":{
+            "addresses":{
+                "0x910Cbd523D972eb0a6f4cAe4618aD62622b39DbF":{
+                    "name":"Torando.Cash 10 ETH"
+                }
+            },
+            "options":{
+                "output-filepath":"./tornadoCash_out.txt"
+            },
+            "enabled":true
+        }
+    }
+}

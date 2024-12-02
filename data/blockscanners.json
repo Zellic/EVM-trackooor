@@ -1,0 +1,49 @@
+{
+    "1": 
+    {
+        "address": "https://etherscan.io/address/%v",
+        "token": "https://etherscan.io/token/%v",
+        "block": "https://etherscan.io/block/%v",
+        "transaction": "https://etherscan.io/tx/%v",
+        "contract-abi": "https://api.etherscan.io/api?module=contract&action=getabi&address=%v&format=raw"
+    },
+    "10": 
+    {
+        "address": "https://optimistic.etherscan.io/address/%v",
+        "token": "https://optimistic.etherscan.io/token/%v",
+        "block": "https://optimistic.etherscan.io/block/%v",
+        "transaction": "https://optimistic.etherscan.io/tx/%v",
+        "contract-abi": "https://api-optimistic.etherscan.io/api?module=contract&action=getabi&address=%v&format=raw"
+    },
+    "8453": 
+    {
+        "address": "https://basescan.org/address/%v",
+        "token": "https://basescan.org/token/%v",
+        "block": "https://basescan.org/block/%v",
+        "transaction": "https://basescan.org/tx/%v",
+        "contract-abi": "https://api.basescan.org/api?module=contract&action=getabi&address=%v&format=raw"
+    },
+    "42161": 
+    {
+        "address": "https://arbiscan.io/address/%v",
+        "token": "https://arbiscan.io/token/%v",
+        "block": "https://arbiscan.io/block/%v",
+        "transaction": "https://arbiscan.io/tx/%v",
+        "contract-abi": "https://api.arbiscan.io/api?module=contract&action=getabi&address=%v&format=raw"
+    },
+    "81457": 
+    {
+        "address": "https://blastscan.io/address/%v",
+        "token": "https://blastscan.io/token/%v",
+        "block": "https://blastscan.io/block/%v",
+        "transaction": "https://blastscan.io/tx/%v",
+        "contract-abi": "https://api.blastscan.io/api?module=contract&action=getabi&address=%v&format=raw"
+    },
+    "11155111": 
+    {
+        "address": "https://sepolia.etherscan.io/address/%v",
+        "token": "https://sepolia.etherscan.io/token/%v",
+        "block": "https://sepolia.etherscan.io/block/%v",
+        "transaction": "https://sepolia.etherscan.io/tx/%v"
+    }
+}
