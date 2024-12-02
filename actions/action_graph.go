@@ -31,7 +31,9 @@ However, due to the inherent design of the EVM trackooor, if A -> B -> C occurs 
 If graphing transactions, will attempt to decode transaction data to show the function called and function arguments. Decoding successfully will require function signature ABI, check the README for adding function signature data.
 
 The EVM trackooor design isn't suited towards graphing, but this is an example of how you could graph data from the blockchain.
-Note that this action is still in development and may contain bugs and undercoverage of transfers/txs.`
+Note that this action is still in development and may contain bugs and undercoverage of transfers/txs.
+
+To graph, graphviz is used, so graphviz and the 'dot' command must be installed on the system.`
 
 	options := `"graph-transactions" - Whether or not to graph transactions
 "graph-internal-txs" - Whether or not to graph internal transactions (this will require your RPC to support Debug API)
