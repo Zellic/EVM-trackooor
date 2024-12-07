@@ -34,7 +34,7 @@ func handleAddressTx(p ActionTxData) {
 	if slices.Contains(monitoredAddresses, from) &&
 		value.Cmp(big.NewInt(0)) > 0 {
 		// alert
-		fmt.Printf("Native ETH Transfer by %v with value %v\n", from, utils.FormatDecimals(value, 18))
+		fmt.Printf("Native ETH Transfer by %v with value %v ETH\n", from, utils.FormatDecimals(value, 18))
 	}
 }
 
