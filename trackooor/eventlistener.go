@@ -20,6 +20,10 @@ import (
 func doEventPostProcessing(vLog types.Log) {
 
 	contract := vLog.Address // contract that emitted the event log
+	if len(vLog.Topics) == 0 {
+		return
+	}
+
 	eventSigHash := vLog.Topics[0]
 
 	var eventFields shared.EventFields
