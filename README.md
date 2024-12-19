@@ -229,12 +229,16 @@ func (p action) InitLogging() {
 }
 ```
 
-There are 4 functions to track events/txs/blocks:
+There are 5 functions to add tracking for events/txs/blocks:
 
-- `addEventSigAction()` adds event sig string to `event sig -> action funcs` map, tracking all events that match that event sig
-- `addAddressEventSigAction()` adds an event sig string and contract address to `contract address -> event sig -> action funcs` map, tracking a specific event from a specific contract
-- `addTxAddressAction()` adds an address to `address -> action funcs` map, tracking all transactions to **and** from an address
-- `addBlockAction()` adds an action func to `action funcs` array, which will be called every time a new block is mined
+- Events
+  - `addEventSigAction()` adds event sig string to `event sig -> action funcs` map, tracking all events that match that event sig
+  - `addAddressEventSigAction()` adds an event sig string and contract address to `contract address -> event sig -> action funcs` map, tracking a specific event from a specific contract
+  - `addAddressEventAction()` adds contract address to `contract address -> action funcs` map, essentially calling action functions regardless of event signature
+  - WARNING: if your function tries [type-asserting](https://go.dev/tour/methods/15) the event data, it might crash as the field might not exist. For example, anonymous events could have emit `indexed bytes32` and put a keccak hash of a valid event signature, but not actually have the relevant topics/data. As such, when using `addEventSigAction()`, you should first check if the mapping (e.g `p.DecodedTopics["from"]`) exists.
+- Transactions and Blocks
+  - `addTxAddressAction()` adds an address to `address -> action funcs` map, tracking all transactions to **and** from an address
+  - `addBlockAction()` adds an action func to `action funcs` array, which will be called every time a new block is mined
 
 ### Action functions
 
