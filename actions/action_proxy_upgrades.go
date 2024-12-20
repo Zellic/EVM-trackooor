@@ -107,6 +107,11 @@ func loadProxyUpgradesConfig(customOptions map[string]interface{}) {
 }
 
 func handleProxyUpgrade(p ActionEventData) {
+	// validate decoded event have fields we're expecting
+	if _, ok := p.DecodedTopics["implementation"]; !ok {
+		return
+	}
+
 	proxy := p.EventLog.Address
 	upgradedTo := p.DecodedTopics["implementation"].(common.Address)
 	fmt.Printf("proxy %v upgraded to %v\n", proxy, upgradedTo)

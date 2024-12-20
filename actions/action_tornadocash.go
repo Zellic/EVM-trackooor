@@ -126,6 +126,11 @@ func (p action) FinishedTornadoCash() {
 }
 
 func ProcessTornadoWithdraw(p ActionEventData) {
+	// validate decoded event have fields we're expecting
+	if _, ok := p.DecodedData["to"]; !ok {
+		return
+	}
+
 	// record address funds were withdrawn to
 	contractAddress := p.EventLog.Address
 	to := p.DecodedData["to"].(common.Address)

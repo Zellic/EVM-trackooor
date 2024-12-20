@@ -158,12 +158,23 @@ func updateERC20Volume(token common.Address) {
 }
 
 func ProcessERC20Transfer(p ActionEventData) {
-	tokenAddress := p.EventLog.Address
+	// validate decoded event have fields we're expecting
+	if _, ok := p.DecodedTopics["from"]; !ok {
+		return
+	}
+	if _, ok := p.DecodedTopics["to"]; !ok {
+		return
+	}
+	if _, ok := p.DecodedData["value"]; !ok {
+		return
+	}
+
 	from := p.DecodedTopics["from"].(common.Address)
 	to := p.DecodedTopics["to"].(common.Address)
 	value := p.DecodedData["value"].(*big.Int)
 
-	tokenInfo := shared.RetrieveERC20Info(p.EventLog.Address)
+	tokenAddress := p.EventLog.Address
+	tokenInfo := shared.RetrieveERC20Info(tokenAddress)
 
 	blockNum := p.EventLog.BlockNumber
 	block := shared.GetBlockHeader(big.NewInt(int64(blockNum)))
