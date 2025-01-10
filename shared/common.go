@@ -80,6 +80,8 @@ type HistoricalOptions struct {
 	StepBlocks         *big.Int
 	ContinueToRealtime bool
 	LoopBackwards      bool
+
+	BatchFetchBlocks bool
 }
 
 // already processed blocks, txs or events

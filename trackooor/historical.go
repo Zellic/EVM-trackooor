@@ -8,6 +8,7 @@ import (
 	"log"
 	"log/slog"
 	"math/big"
+	"sync"
 	"time"
 
 	"github.com/ethereum/go-ethereum"
@@ -96,35 +97,73 @@ func ProcessHistoricalBlocks(fromBlock *big.Int, toBlock *big.Int) {
 	var mainBar *progressbar.ProgressBar
 	mainBar = progressbar.Default(big.NewInt(0).Sub(toBlock, fromBlock).Int64())
 
-	// process one block at a time
-	if shared.Options.HistoricalOptions.LoopBackwards {
-		shared.Infof(slog.Default(), "Looping backwards from %v to %v\n", fromBlock, toBlock)
-		mainBar = progressbar.Default(big.NewInt(0).Sub(fromBlock, toBlock).Int64())
-		for currentBlock := fromBlock; currentBlock.Cmp(toBlock) >= 0; currentBlock.Sub(currentBlock, big.NewInt(1)) {
-			mainBar.Describe(fmt.Sprintf("Block %v", currentBlock))
+	if shared.Options.HistoricalOptions.BatchFetchBlocks {
+		// process one block at a time
+		if shared.Options.HistoricalOptions.LoopBackwards {
+			log.Fatalf("unimplemented LoopBackwards & BatchFetchBlocks")
+		} else {
+			batchCount := big.NewInt(100)
+			zero := big.NewInt(0)
 
-			block, err := shared.Client.BlockByNumber(context.Background(), currentBlock)
-			if err != nil {
-				log.Fatalf("Could not retrieve block %v, err: %v\n", currentBlock, err)
+			var blockNumWaitGroup sync.WaitGroup
+			for currentBlock := fromBlock; currentBlock.Cmp(toBlock) <= 0; currentBlock.Add(currentBlock, big.NewInt(1)) {
+				mainBar.Describe(fmt.Sprintf("Block %v", currentBlock))
+
+				blockNumWaitGroup.Add(1)
+				shared.BlockWaitGroup.Add(1)
+				go func() {
+					tmpCurBlock := big.NewInt(0).Set(currentBlock)
+					blockNumWaitGroup.Done()
+
+					block, err := shared.Client.BlockByNumber(context.Background(), tmpCurBlock)
+					if err != nil {
+						log.Fatalf("Could not retrieve block %v, err: %v\n", tmpCurBlock, err)
+					}
+
+					handleBlock(block)
+				}()
+
+				blockNumWaitGroup.Wait()
+
+				if big.NewInt(0).Mod(currentBlock, batchCount).Cmp(zero) == 0 {
+					// fmt.Printf("currentBlock: %v, waiting for BlockWaitGroup...\n", currentBlock) // DEBUG
+					shared.BlockWaitGroup.Wait()
+				}
+
+				mainBar.Add(1)
 			}
-			// fmt.Printf("Retrieved block %v\n", block.Number())
-
-			handleBlock(block)
-
-			mainBar.Add(1)
 		}
 	} else {
-		for currentBlock := fromBlock; currentBlock.Cmp(toBlock) <= 0; currentBlock.Add(currentBlock, big.NewInt(1)) {
-			mainBar.Describe(fmt.Sprintf("Block %v", currentBlock))
+		// process one block at a time
+		if shared.Options.HistoricalOptions.LoopBackwards {
+			shared.Infof(slog.Default(), "Looping backwards from %v to %v\n", fromBlock, toBlock)
+			mainBar = progressbar.Default(big.NewInt(0).Sub(fromBlock, toBlock).Int64())
+			for currentBlock := fromBlock; currentBlock.Cmp(toBlock) >= 0; currentBlock.Sub(currentBlock, big.NewInt(1)) {
+				mainBar.Describe(fmt.Sprintf("Block %v", currentBlock))
 
-			block, err := shared.Client.BlockByNumber(context.Background(), currentBlock)
-			if err != nil {
-				log.Fatalf("Could not retrieve block %v, err: %v\n", currentBlock, err)
+				block, err := shared.Client.BlockByNumber(context.Background(), currentBlock)
+				if err != nil {
+					log.Fatalf("Could not retrieve block %v, err: %v\n", currentBlock, err)
+				}
+				// fmt.Printf("Retrieved block %v\n", block.Number())
+
+				handleBlock(block)
+
+				mainBar.Add(1)
 			}
+		} else {
+			for currentBlock := fromBlock; currentBlock.Cmp(toBlock) <= 0; currentBlock.Add(currentBlock, big.NewInt(1)) {
+				mainBar.Describe(fmt.Sprintf("Block %v", currentBlock))
 
-			handleBlock(block)
+				block, err := shared.Client.BlockByNumber(context.Background(), currentBlock)
+				if err != nil {
+					log.Fatalf("Could not retrieve block %v, err: %v\n", currentBlock, err)
+				}
 
-			mainBar.Add(1)
+				handleBlock(block)
+
+				mainBar.Add(1)
+			}
 		}
 	}
 }

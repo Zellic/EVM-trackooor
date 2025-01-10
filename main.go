@@ -39,6 +39,8 @@ var fromBlockStr string
 var toBlockStr string
 var stepBlocksStr string
 
+var batchFetchBlocks bool
+
 // data
 var abiFilepath string
 var chainIdStr string
@@ -500,6 +502,8 @@ func loadConfigFile(filename string) {
 	if v, ok := configOptions["max-requests-per-second"]; ok {
 		options.MaxRequestsPerSecond = int(v.(float64))
 	}
+
+	options.HistoricalOptions.BatchFetchBlocks = batchFetchBlocks
 }
 
 func init() {
@@ -537,6 +541,8 @@ func init() {
 	historicalCmd.PersistentFlags().StringVar(&fromBlockStr, "from-block", "", "Block to start from when doing historical tracking")
 	historicalCmd.PersistentFlags().StringVar(&toBlockStr, "to-block", "", "Block to stop at (inclusive) when doing historical tracking")
 	historicalCmd.PersistentFlags().StringVar(&stepBlocksStr, "step-blocks", "", "How many blocks to request at a time, only relevant for historical event filter log.")
+
+	historicalCmd.PersistentFlags().BoolVar(&batchFetchBlocks, "batch-fetch-blocks", false, "Whether or not to fetch multiple blocks asyncronously (currently in testing)")
 
 	// listening to pending (unconfirmed) blocks
 	realtimeBlocksCmd.PersistentFlags().BoolVar(&PendingBlocks, "pending-blocks", false, "Whether or not to listen for pending (unconfirmed) blocks")

@@ -23,7 +23,6 @@ func doEventPostProcessing(vLog types.Log) {
 	if len(vLog.Topics) == 0 {
 		return
 	}
-
 	eventSigHash := vLog.Topics[0]
 
 	var eventFields shared.EventFields

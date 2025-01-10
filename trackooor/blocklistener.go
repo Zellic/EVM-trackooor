@@ -163,7 +163,9 @@ func handleBlock(block *types.Block) {
 	}
 
 	// wait for actions to finish (if the action requests it)
-	shared.BlockWaitGroup.Wait()
+	if !shared.Options.HistoricalOptions.BatchFetchBlocks {
+		shared.BlockWaitGroup.Wait()
+	}
 }
 
 func ListenToBlocks() {

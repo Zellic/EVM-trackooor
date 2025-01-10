@@ -105,9 +105,16 @@ func NewAddressBalanceRetriever(coinApiKey string, tokens []common.Address) *Add
 		symbol := erc20Info.Symbol
 		symbol = strings.ToUpper(symbol) //coinAPI uses uppercase symbols
 
-		if _, ok := abr.tokenRates[symbol]; !ok {
-			log.Printf("AddressBalanceRetriever - Token %v at %v does not have price data!\n", symbol, tokenAddress)
+		// special case for WETH and WEETH, set price same as ETH
+		if symbol == "WETH" || symbol == "WEETH" {
+			abr.tokenRates[symbol] = abr.tokenRates["ETH"]
+			abr.tokenInfos[tokenAddress] = erc20Info
 			continue
+		} else {
+			if _, ok := abr.tokenRates[symbol]; !ok {
+				log.Printf("AddressBalanceRetriever - Token %v at %v does not have price data!\n", symbol, tokenAddress)
+				continue
+			}
 		}
 
 		abr.tokenInfos[tokenAddress] = erc20Info
