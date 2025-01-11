@@ -1,4 +1,4 @@
-module evm-trackooor
+module github.com/Zellic/EVM-trackooor
 
 go 1.22.1
 
