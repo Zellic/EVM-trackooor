@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	discordwebhook "evm-trackooor/discord-webhook"
+	discordwebhook "github.com/Zellic/EVM-trackooor/discord-webhook"
 )
 
 // global webhook instance

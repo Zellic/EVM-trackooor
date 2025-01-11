@@ -2,14 +2,15 @@ package trackooor
 
 import (
 	"context"
-	"evm-trackooor/actions"
-	"evm-trackooor/shared"
 	"fmt"
 	"log"
 	"log/slog"
 	"math/big"
 	"sync"
 	"time"
+
+	"github.com/Zellic/EVM-trackooor/actions"
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"

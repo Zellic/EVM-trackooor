@@ -3,10 +3,11 @@ package actions
 import (
 	"bytes"
 	"context"
-	"evm-trackooor/shared"
 	"fmt"
 	"os"
 	"sync"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/common"
 )

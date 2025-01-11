@@ -3,14 +3,15 @@ package utils
 import (
 	"context"
 	"encoding/json"
-	"evm-trackooor/contracts/IERC20Metadata"
-	"evm-trackooor/shared"
 	"io"
 	"log"
 	"log/slog"
 	"math/big"
 	"net/http"
 	"strings"
+
+	"github.com/Zellic/EVM-trackooor/contracts/IERC20Metadata"
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"

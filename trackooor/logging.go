@@ -1,8 +1,9 @@
 package trackooor
 
 import (
-	"evm-trackooor/shared"
 	"fmt"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 )
 
 func logListeningEventsSingle(options shared.TrackooorOptions) {

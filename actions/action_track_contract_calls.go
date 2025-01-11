@@ -2,8 +2,9 @@ package actions
 
 import (
 	"bytes"
-	"evm-trackooor/shared"
 	"fmt"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/crypto"
 )

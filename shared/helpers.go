@@ -3,13 +3,14 @@ package shared
 import (
 	"context"
 	"encoding/hex"
-	"evm-trackooor/contracts/IERC20Metadata"
 	"fmt"
 	"log"
 	"log/slog"
 	"math/big"
 	"reflect"
 	"sync"
+
+	"github.com/Zellic/EVM-trackooor/contracts/IERC20Metadata"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"

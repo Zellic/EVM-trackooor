@@ -1,12 +1,13 @@
 package actions
 
 import (
-	"evm-trackooor/shared"
-	"evm-trackooor/utils"
 	"fmt"
 	"log"
 	"math/big"
 	"strconv"
+
+	"github.com/Zellic/EVM-trackooor/shared"
+	"github.com/Zellic/EVM-trackooor/utils"
 
 	"github.com/ethereum/go-ethereum/common"
 )

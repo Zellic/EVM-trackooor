@@ -1,12 +1,13 @@
 package actions
 
 import (
-	"evm-trackooor/shared"
 	"log"
 	"log/slog"
 	"reflect"
 	"slices"
 	"sync"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"

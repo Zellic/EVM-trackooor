@@ -3,8 +3,6 @@ package actions
 import (
 	"encoding/json"
 	"errors"
-	"evm-trackooor/shared"
-	"evm-trackooor/utils"
 	"fmt"
 	"io"
 	"log"
@@ -15,7 +13,10 @@ import (
 	"sync"
 	"time"
 
-	"evm-trackooor/contracts/uniswapPool"
+	"github.com/Zellic/EVM-trackooor/shared"
+	"github.com/Zellic/EVM-trackooor/utils"
+
+	"github.com/Zellic/EVM-trackooor/contracts/uniswapPool"
 
 	"github.com/ethereum/go-ethereum/common"
 )

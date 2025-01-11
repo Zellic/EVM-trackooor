@@ -1,12 +1,13 @@
 package utils
 
 import (
-	"evm-trackooor/shared"
 	"fmt"
 	"log/slog"
 	"math/big"
 	"reflect"
 	"strings"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/common"
 )

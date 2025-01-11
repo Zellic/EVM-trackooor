@@ -1,9 +1,6 @@
 package actions
 
 import (
-	discordwebhook "evm-trackooor/discord-webhook"
-	"evm-trackooor/shared"
-	"evm-trackooor/utils"
 	"fmt"
 	"log/slog"
 	"math/big"
@@ -11,6 +8,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	discordwebhook "github.com/Zellic/EVM-trackooor/discord-webhook"
+	"github.com/Zellic/EVM-trackooor/shared"
+	"github.com/Zellic/EVM-trackooor/utils"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"

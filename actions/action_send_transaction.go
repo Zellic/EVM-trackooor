@@ -3,10 +3,11 @@ package actions
 import (
 	"context"
 	"crypto/ecdsa"
-	"evm-trackooor/shared"
 	"fmt"
 	"log"
 	"math/big"
+
+	"github.com/Zellic/EVM-trackooor/shared"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"

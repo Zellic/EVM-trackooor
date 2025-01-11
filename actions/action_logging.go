@@ -2,15 +2,16 @@ package actions
 
 import (
 	"encoding/hex"
-	discordwebhook "evm-trackooor/discord-webhook"
-	"evm-trackooor/shared"
-	"evm-trackooor/utils"
 	"fmt"
 	"log"
 	"log/slog"
 	"strconv"
 	"strings"
 	"time"
+
+	discordwebhook "github.com/Zellic/EVM-trackooor/discord-webhook"
+	"github.com/Zellic/EVM-trackooor/shared"
+	"github.com/Zellic/EVM-trackooor/utils"
 
 	"github.com/ethereum/go-ethereum/core/types"
 )

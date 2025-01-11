@@ -2,8 +2,8 @@ package database
 
 import (
 	"encoding/json"
-	"evm-trackooor/shared"
 	"fmt"
+	"github.com/Zellic/EVM-trackooor/shared"
 	"log"
 	"log/slog"
 	"os"
