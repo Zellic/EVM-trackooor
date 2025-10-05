@@ -17,6 +17,7 @@ A modular tool to track and process anything on an EVM chain, including events, 
 - [Data Files](#data-files)
   - [Adding event signature data](#adding-event-signature-data)
   - [Adding function signature data](#adding-function-signature-data)
+- [RPC authentication via environment headers](#rpc-authentication-via-environment-headers)
 - [Supported Chains](#supported-chains)
 - [Contributions and Support](#contributions-and-support)
 
@@ -162,6 +163,29 @@ The example config below logs info for `0xA0b8...` using the `Logging` action, a
   }
 }
 ```
+
+## RPC authentication via environment headers
+
+You can pass an optional custom HTTP header for RPC authentication using environment variables. Any header name/value is supported.
+
+- Set the header name in `RPC_HEADER_KEY`
+- Set the header value in `RPC_HEADER_VALUE`
+
+Examples:
+
+```bash
+# macOS/Linux (bash/zsh)
+export RPC_HEADER_KEY='Authorization'
+export RPC_HEADER_VALUE='Bearer YOUR_TOKEN'
+go run main.go track realtime --config ./config.json
+```
+
+```bash
+# One-off invocation (bash/zsh)
+RPC_HEADER_KEY='X-API-Key' RPC_HEADER_VALUE='your-api-key' \
+  go run main.go track realtime --config ./config.json
+```
+
 
 There are also options specific to events. You shouldn't need to use these, unless you need to filter by events and it has to be fast. Both of these are optional.
 - `"event-signatures"` - List of event signatures (unhashed) to filter by

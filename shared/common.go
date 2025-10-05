@@ -7,7 +7,9 @@ import (
 	"log"
 	"log/slog"
 	"math/big"
+	"net/http"
 	"os"
+	"strings"
 	"sync"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -140,11 +142,29 @@ func TimeLogger(whichController string) *log.Logger {
 
 func ConnectToRPC(rpcURL string) (*ethclient.Client, *big.Int) {
 	Infof(slog.Default(), "Connecting to RPC URL...\n")
-	// client, err := ethclient.Dial(rpcURL)
+	// Build dial options and include optional HTTP/WebSocket headers from env
+	var clientOptions []rpc.ClientOption
+	clientOptions = append(clientOptions, rpc.WithWebsocketMessageSizeLimit(0))
+
+	// Support explicit key/value envs first, fallback to legacy RPC_HEADER="Key:Value"
+	{
+		var hdr http.Header
+		if key, val := os.Getenv("RPC_HEADER_KEY"), os.Getenv("RPC_HEADER_VALUE"); key != "" && val != "" {
+			hdr = http.Header{}
+			hdr.Add(strings.TrimSpace(key), strings.TrimSpace(val))
+		}
+		if hdr != nil {
+			clientOptions = append(clientOptions, rpc.WithHeaders(hdr))
+			for k := range hdr {
+				Infof(slog.Default(), "Applied RPC header '%s' from environment\n", k)
+			}
+		}
+	}
+
 	RpcClient, err := rpc.DialOptions(
 		context.Background(),
 		rpcURL,
-		rpc.WithWebsocketMessageSizeLimit(0), // no limit
+		clientOptions...,
 	)
 	client := ethclient.NewClient(RpcClient)
 
